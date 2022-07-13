@@ -111,9 +111,9 @@ func init() {
 func soutuapi(keyword string) (r resultjson, err error) {
 	var data []byte
 	data, err = web.RequestDataWith(&http.Client{Transport: &http3.RoundTripper{}},
-		"https://api.pixivel.moe/v2/pixiv/illust/search/"+url.QueryEscape(keyword)+"?page=0",
+		"https://i.pixiv.cat/v2/pixiv/illust/search/"+url.QueryEscape(keyword)+"?page=0",
 		"GET",
-		"https://pixivel.moe/",
+		"https://i.pixiv.cat/",
 		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36",
 	)
 	if err != nil {
